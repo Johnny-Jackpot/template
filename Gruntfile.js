@@ -34,8 +34,9 @@ module.exports = function (grunt) {
                 // See https://github.com/gruntjs/grunt-contrib-watch#files
                 files: [
                     'index.html',
-                    'css/*.css'
+                    'css/*.css',
                 ],
+
                 options: {
                     livereload: true
                 }
@@ -48,10 +49,31 @@ module.exports = function (grunt) {
                 // Gets the port from the connect configuration
                 path: 'http://localhost:<%= express.all.options.port%>'
             }
-        }
+        },
+
+        compass: {
+            dist: {
+                options: {
+                    sassDir: 'sass',
+                    cssDir: 'css',
+                    watch: true,
+                    outputStyle: 'expanded'
+                }
+            }
+        },
+
+        concurrent: {
+            target: {
+                tasks: ['compass', 'server'],
+                options: {
+                    logConcurrentOutput: true
+                }
+            }
+        }              
+
     });
 
-
+    
     // Creates the `server` task
     grunt.registerTask('server', [
         'express',
@@ -59,5 +81,5 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('default', ['server']);
+    grunt.registerTask('default', ['concurrent']);
 };

@@ -1,0 +1,13 @@
+//usage @include prop-val((color: red, width: 100px));
+@mixin prop-val($map) {
+	@if type-of($map) != 'map' {
+		@error "Зaram must be a map. Was #{$map} => #{type-of($map)}";
+	}
+
+	$keys: map-keys($map);
+	$values: map-values($map);
+
+	@for $i from 1 through length($map) {
+		#{nth($keys, $i)}: #{nth($values, $i)};
+	}
+}
