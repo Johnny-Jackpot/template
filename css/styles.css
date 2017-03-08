@@ -1,4 +1,19 @@
-@import url(fonts.css);
+/* font-family: "MyriadProRegular"; */
+@font-face {
+  font-family: "MyriadPro";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "Ubuntu"; */
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/UbuntuRegular/UbuntuRegular.eot");
+  src: url("../fonts/UbuntuRegular/UbuntuRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/UbuntuRegular/UbuntuRegular.woff") format("woff"), url("../fonts/UbuntuRegular/UbuntuRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 /* line 6, ../sass/styles.scss */
 a {
   text-decoration: none;
@@ -22,45 +37,43 @@ a {
 .logo {
   color: #4c4c4b;
   display: block;
-  font: 72px MyriadPro, sans-serif;
-  margin: 68px 0 0 50%;
+  font: 72px MyriadPro, Arial, Helvetica, sans-serif;
+  margin: 68px auto 0;
   width: 235px;
   text-decoration: none;
-  transform: translateX(-50%);
 }
 
 /*nav toggle button for mobile*/
-/* line 34, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
 .hamburger, .hamburger:before, .hamburger:after {
   background-color: #f36b47;
   height: 5px;
-  position: absolute;
-  right: 5.3%;
-  top: 34px;
+  float: right;
+  margin: 34px 5.3% 0 0;
   width: 45px;
 }
-/* line 42, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 .hamburger:before, .hamburger:after {
   content: "";
   display: block;
-  right: 0;
 }
-/* line 49, ../sass/styles.scss */
+/* line 46, ../sass/styles.scss */
 .hamburger:before {
-  top: -10px;
+  margin: -10px 0 0 0;
 }
-/* line 54, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 .hamburger:after {
-  top: 10px;
+  clear: both;
+  margin: 10px 0 0 0;
 }
 
 /*slider*/
-/* line 62, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 .slider {
   position: relative;
 }
 
-/* line 66, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 .slide {
   background: url(../img/mobile/slide-1.jpg) no-repeat;
   background-size: cover;
@@ -70,23 +83,23 @@ a {
   width: 100%;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 .slide-info {
   background: rgba(0, 0, 0, 0.4);
   color: #d8dbdb;
-  font: 18px Ubuntu, sans-serif;
+  font: 18px Ubuntu, Arial, Helvetica, sans-serif;
   margin: 0 auto 11px auto;
   padding: 6px 0 7px;
   width: 53%;
 }
-/* line 83, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 .slide-info:nth-of-type(2) {
   font-weight: bold;
   width: 67.5%;
 }
 
 /*slider arrows*/
-/* line 90, ../sass/styles.scss */
+/* line 88, ../sass/styles.scss */
 .sprite-arrow-left,
 .sprite-arrow-right {
   cursor: pointer;
@@ -96,21 +109,21 @@ a {
   width: 20px;
 }
 
-/* line 99, ../sass/styles.scss */
+/* line 97, ../sass/styles.scss */
 .sprite-arrow-left {
   background-position: -39px -5px;
   left: 4%;
 }
 
-/* line 104, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 .sprite-arrow-right {
   background-position: -69px -5px;
   right: 3.8%;
 }
 
 /*section immediatly below the slider*/
-/* line 110, ../sass/styles.scss */
-.below-slider {
+/* line 108, ../sass/styles.scss */
+.learn-more {
   background: #f36b47;
   box-shadow: 0 -1px 0 1px #e99882;
   box-sizing: border-box;
@@ -119,53 +132,53 @@ a {
   padding: 25px 0 0 0;
 }
 
-/* line 119, ../sass/styles.scss */
-.below-slider-info,
-.below-slider-link {
+/* line 117, ../sass/styles.scss */
+.learn-more-info,
+.learn-more-link {
   color: #fffcf8;
-  font: 14px Ubuntu, sans-serif;
+  font: 14px Ubuntu, Arial, Helvetica, sans-serif;
 }
 
-/* line 125, ../sass/styles.scss */
-.below-slider-info {
+/* line 123, ../sass/styles.scss */
+.learn-more-info {
   text-align: center;
   letter-spacing: .5px;
 }
 
-/* line 130, ../sass/styles.scss */
-.below-slider-link {
+/* line 128, ../sass/styles.scss */
+.learn-more-link {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: bold;
   text-decoration: underline;
   text-transform: uppercase;
 }
 
 /*about UIBrush*/
-/* line 138, ../sass/styles.scss */
+/* line 136, ../sass/styles.scss */
 .about-uibrush {
   box-sizing: border-box;
   padding: 42px 25px 31px;
   text-align: center;
 }
 
-/* line 144, ../sass/styles.scss */
+/* line 142, ../sass/styles.scss */
 .about-uibrush-heading {
   border-bottom: 2px solid #f37b5c;
   box-sizing: border-box;
   color: #484848;
   display: inline-block;
-  font: bold 26px Ubuntu, sans-serif;
+  font: bold 26px Ubuntu, Arial, Helvetica, sans-serif;
   margin: 0 0 15px -1px;
 }
 
-/* line 153, ../sass/styles.scss */
+/* line 151, ../sass/styles.scss */
 .about-uibrush-text {
   color: #9d9c9c;
-  font: 18px/25px Ubuntu, sans-serif;
+  font: 18px/25px Ubuntu, Arial, Helvetica, sans-serif;
 }
 
 /*features*/
-/* line 159, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 .features {
   border-bottom: 8px solid #f36b47;
   border-top: 8px solid #f36b47;
@@ -175,94 +188,97 @@ a {
   text-align: center;
 }
 
-/* line 168, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .feature-heading {
   color: #2e2e2e;
-  font: 24px MyriadPro, sans-serif;
+  font: 24px MyriadPro, Arial, Helvetica, sans-serif;
 }
 
-/* line 173, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
 .feature-info {
   color: #9d9c9c;
-  font: 18px/18px Ubuntu, sans-serif;
+  font: 18px/18px Ubuntu, Arial, Helvetica, sans-serif;
   height: 72px;
   overflow: hidden;
   word-wrap: break-word;
 }
 
-/* line 196, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 .feature:nth-of-type(1) {
   margin: 49px 0 0 0;
 }
-/* line 199, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .feature:nth-of-type(1) .sprite {
   margin: 0 0 0 -6px;
 }
-/* line 203, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 .feature:nth-of-type(1) .feature-heading {
   margin: 12px 0 10px 3px;
 }
-/* line 196, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 .feature:nth-of-type(2) {
   margin: 32px 0 0 0;
 }
-/* line 199, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .feature:nth-of-type(2) .sprite {
   margin: 0 0 0 -17px;
 }
-/* line 203, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 .feature:nth-of-type(2) .feature-heading {
   margin: 6px 0 13px -15px;
 }
-/* line 196, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 .feature:nth-of-type(3) {
   margin: 43px 0 0 0;
 }
-/* line 199, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .feature:nth-of-type(3) .sprite {
   margin: 0 0 0 -15px;
 }
-/* line 203, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 .feature:nth-of-type(3) .feature-heading {
   margin: 13px 0 9px -15px;
 }
-/* line 196, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 .feature:nth-of-type(4) {
   margin: 38px 0 0 0;
 }
-/* line 199, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .feature:nth-of-type(4) .sprite {
   margin: 0 0 0 -3px;
 }
-/* line 203, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 .feature:nth-of-type(4) .feature-heading {
   margin: 9px 0 13px -15px;
 }
 
 /*recent projects*/
-/* line 212, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 .projects {
   box-sizing: border-box;
   padding: 0 0 114px 0;
 }
 
-/* line 217, ../sass/styles.scss */
+/*
+    strange centering beacuse in this way easier to make 
+    line below heading
+*/
+/* line 219, ../sass/styles.scss */
 .projects-heading {
   border-bottom: 2px solid #f37b5c;
   color: #484848;
   display: inline-block;
-  font: bold 26px Ubuntu, sans-serif;
+  font: bold 26px Ubuntu, Arial, Helvetica, sans-serif;
   letter-spacing: .3px;
   margin: 77px 0 20px 49.8%;
   padding: 0 0 1px 0;
-  text-align: center;
   transform: translateX(-50%);
 }
 
-/* line 229, ../sass/styles.scss */
+/* line 230, ../sass/styles.scss */
 .projects-about {
   color: #9d9c9c;
-  font: 18px/25px MyriadPro, sans-serif;
+  font: 18px/25px MyriadPro, Arial, Helvetica, sans-serif;
   height: 50px;
   margin: 0 0 0 11%;
   overflow: hidden;
@@ -271,32 +287,37 @@ a {
   word-wrap: break-word;
 }
 
-/* line 240, ../sass/styles.scss */
-.project-link {
+/* line 241, ../sass/styles.scss */
+.project-item {
   display: block;
-  margin-left: 48.9%;
+  margin: 0 auto;
+  padding-right: 11px;
   min-width: 250px;
-  transform: translateX(-50%);
   width: 52.2%;
 }
-/* line 257, ../sass/styles.scss */
-.project-link:nth-of-type(1) {
+/* line 258, ../sass/styles.scss */
+.project-item:nth-of-type(1) {
   margin-top: 79px;
 }
-/* line 257, ../sass/styles.scss */
-.project-link:nth-of-type(2) {
+/* line 258, ../sass/styles.scss */
+.project-item:nth-of-type(2) {
   margin-top: 58px;
 }
-/* line 257, ../sass/styles.scss */
-.project-link:nth-of-type(3) {
+/* line 258, ../sass/styles.scss */
+.project-item:nth-of-type(3) {
   margin-top: 68px;
 }
-/* line 257, ../sass/styles.scss */
-.project-link:nth-of-type(4) {
+/* line 258, ../sass/styles.scss */
+.project-item:nth-of-type(4) {
   margin-top: 67px;
 }
 
-/* line 264, ../sass/styles.scss */
+/* line 265, ../sass/styles.scss */
+.project-link {
+  display: block;
+}
+
+/* line 269, ../sass/styles.scss */
 .project-link-figure {
   background: #eeeeee;
   border: 1px solid #e0dddd;
@@ -304,73 +325,73 @@ a {
   width: 100%;
 }
 
-/* line 271, ../sass/styles.scss */
+/* line 276, ../sass/styles.scss */
 .project-link-figure-image {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   width: 100%;
 }
 
-/* line 277, ../sass/styles.scss */
+/* line 282, ../sass/styles.scss */
 .project-link-figure-heading {
   border-bottom: 1px solid #d5d4d3;
   color: #fe5c32;
-  font: 24px/18px Ubuntu, sans-serif;
+  font: 24px/18px Ubuntu, Arial, Helvetica, sans-serif;
   letter-spacing: -1px;
   margin: 0 auto;
   text-align: center;
   width: 90%;
 }
-/* line 298, ../sass/styles.scss */
-.project-link:nth-of-type(1) .project-link-figure-heading {
+/* line 303, ../sass/styles.scss */
+.project-item:nth-of-type(1) .project-link-figure-heading {
   padding: 1px 0 6px;
   text-indent: 10px;
 }
-/* line 298, ../sass/styles.scss */
-.project-link:nth-of-type(2) .project-link-figure-heading {
+/* line 303, ../sass/styles.scss */
+.project-item:nth-of-type(2) .project-link-figure-heading {
   padding: 2px 0 5px;
   text-indent: 7px;
 }
-/* line 298, ../sass/styles.scss */
-.project-link:nth-of-type(3) .project-link-figure-heading {
+/* line 303, ../sass/styles.scss */
+.project-item:nth-of-type(3) .project-link-figure-heading {
   padding: 6px 0 1px;
   text-indent: 3px;
 }
-/* line 298, ../sass/styles.scss */
-.project-link:nth-of-type(4) .project-link-figure-heading {
+/* line 303, ../sass/styles.scss */
+.project-item:nth-of-type(4) .project-link-figure-heading {
   letter-spacing: 0.3px;
   padding: 7px 0 0;
   text-indent: 10px;
   word-spacing: -4px;
 }
 
-/* line 305, ../sass/styles.scss */
+/* line 310, ../sass/styles.scss */
 .project-link-figure-info {
   color: #605f5f;
-  font: 18px/18px Ubuntu, sans-serif;
+  font: 18px/18px Ubuntu, Arial, Helvetica, sans-serif;
   letter-spacing: -.6px;
   padding: 3px 0 10px;
   text-align: center;
 }
-/* line 320, ../sass/styles.scss */
-.project-link:nth-of-type(1) .project-link-figure-info {
+/* line 325, ../sass/styles.scss */
+.project-item:nth-of-type(1) .project-link-figure-info {
   padding-left: 14px;
 }
-/* line 320, ../sass/styles.scss */
-.project-link:nth-of-type(2) .project-link-figure-info {
+/* line 325, ../sass/styles.scss */
+.project-item:nth-of-type(2) .project-link-figure-info {
   padding-left: 16px;
 }
-/* line 320, ../sass/styles.scss */
-.project-link:nth-of-type(3) .project-link-figure-info {
+/* line 325, ../sass/styles.scss */
+.project-item:nth-of-type(3) .project-link-figure-info {
   padding-left: 9px;
 }
-/* line 320, ../sass/styles.scss */
-.project-link:nth-of-type(4) .project-link-figure-info {
+/* line 325, ../sass/styles.scss */
+.project-item:nth-of-type(4) .project-link-figure-info {
   padding-left: 1px;
 }
 
 /*talk to us*/
-/* line 327, ../sass/styles.scss */
+/* line 332, ../sass/styles.scss */
 .talk-to-us {
   background: #7a7a7a;
   box-sizing: border-box;
@@ -379,156 +400,157 @@ a {
   text-align: center;
 }
 
-/* line 335, ../sass/styles.scss */
+/* line 340, ../sass/styles.scss */
 .talk-to-us-heading {
-  font: 60px Ubuntu, sans-serif;
+  font: 60px Ubuntu, Arial, Helvetica, sans-serif;
   margin: 0 0 40px;
   text-indent: 1px;
 }
 
-/* line 341, ../sass/styles.scss */
+/* line 346, ../sass/styles.scss */
 .talk-to-us-info {
-  font: 24px/25px MyriadPro, sans-serif;
+  font: 24px/25px MyriadPro, Arial, Helvetica, sans-serif;
 }
 
-/*---feedback---*/
-/*feedback  contact us*/
-/* line 347, ../sass/styles.scss */
+/*---contacts---*/
+/*contacts contact us*/
+/* line 352, ../sass/styles.scss */
 .contact-us {
   box-sizing: border-box;
   padding: 54px 20px 113px;
   text-align: center;
 }
 
-/* line 353, ../sass/styles.scss */
+/* line 358, ../sass/styles.scss */
 .contact-us-heading {
   color: #484848;
   border-bottom: 2px solid #f37b5c;
   display: inline-block;
-  font: 48px Ubuntu, sans-serif;
+  font: 48px Ubuntu, Arial, Helvetica, sans-serif;
   letter-spacing: -1.5px;
   padding: 0 0 1px 0;
   text-indent: -3px;
   word-spacing: -2px;
 }
 
-/* line 364, ../sass/styles.scss */
+/* line 369, ../sass/styles.scss */
 .contact-us-info {
   color: #9d9c9c;
-  font: 25px/25px Ubuntu, sans-serif;
+  font: 25px/25px Ubuntu, Arial, Helvetica, sans-serif;
   margin: 57px 0 0 0;
 }
 
-/* line 370, ../sass/styles.scss */
-.contact-us-map-img {
+/* line 375, ../sass/styles.scss */
+.contacts-map-img {
   width: 100%;
 }
 
-/* line 374, ../sass/styles.scss */
-.contact-us-details {
+/* line 379, ../sass/styles.scss */
+.contacts-details {
   padding: 65px 0 0 0;
 }
 
-/* line 378, ../sass/styles.scss */
-.contact-us-details-heading {
+/* line 383, ../sass/styles.scss */
+.contacts-details-heading {
   color: #484848;
   display: block;
-  font: 48px Ubuntu, sans-serif;
+  font: 48px Ubuntu, Arial, Helvetica, sans-serif;
   letter-spacing: -1.5px;
   margin: 0 auto 0;
-  position: relative;
   text-align: center;
   text-indent: 1px;
   width: 73%;
   word-spacing: -3px;
 }
-/* line 390, ../sass/styles.scss */
-.contact-us-details-heading:after {
+/* line 394, ../sass/styles.scss */
+.contacts-details-heading:after {
   background: #f37b5c;
   content: "";
   display: block;
   height: 2px;
-  left: 50%;
-  position: absolute;
-  bottom: -8px;
-  transform: translateX(-50%);
+  margin: 6px auto 0;
   width: 62%;
 }
 
-/* line 403, ../sass/styles.scss */
-.contact-us-details-contact {
+/* line 404, ../sass/styles.scss */
+.contacts-details-contact {
   align-items: center;
   color: #9d9c9c;
   display: flex;
   flex-wrap: wrap;
-  font: 30px/25px Ubuntu, sans-serif;
+  font: 30px/25px Ubuntu, Arial, Helvetica, sans-serif;
   margin-left: 11%;
   letter-spacing: -1.3px;
   width: 68%;
 }
-/* line 413, ../sass/styles.scss */
-.contact-us-details-contact .sprite {
+/* line 414, ../sass/styles.scss */
+.contacts-details-contact .sprite {
   align-content: center;
   margin-right: 42px;
   width: 28px;
 }
-/* line 426, ../sass/styles.scss */
-.contact-us-details-contact:nth-of-type(1) {
-  margin-top: 90px;
+/* line 427, ../sass/styles.scss */
+.contacts-details-contact:nth-of-type(1) {
+  margin-top: 82px;
 }
-/* line 426, ../sass/styles.scss */
-.contact-us-details-contact:nth-of-type(2) {
+/* line 427, ../sass/styles.scss */
+.contacts-details-contact:nth-of-type(2) {
   margin-top: 45px;
 }
-/* line 426, ../sass/styles.scss */
-.contact-us-details-contact:nth-of-type(3) {
+/* line 427, ../sass/styles.scss */
+.contacts-details-contact:nth-of-type(3) {
   margin-top: 49px;
 }
-/* line 432, ../sass/styles.scss */
-.contact-us-details-contact:nth-of-type(3) sup {
+/* line 433, ../sass/styles.scss */
+.contacts-details-contact:nth-of-type(3) sup {
   vertical-align: super;
   font-size: 20px;
 }
-/* line 437, ../sass/styles.scss */
-.contact-us-details-contact:nth-of-type(3) span {
+/* line 438, ../sass/styles.scss */
+.contacts-details-contact:nth-of-type(3) span:nth-of-type(2) {
   max-width: 255px;
   min-width: 78%;
 }
 
-/*feedback form*/
-/* line 444, ../sass/styles.scss */
-.contact-us-details-form {
+/*contacts form*/
+/* line 445, ../sass/styles.scss */
+.contacts-form {
   margin: 30px 0 0 0;
 }
 
-/* line 448, ../sass/styles.scss */
-.contact-us-details-input {
+/* line 449, ../sass/styles.scss */
+.contacts-form-input {
   background: #f0f0f0;
   border: 1px solid #cac6c6;
   border-radius: 3px;
   box-sizing: border-box;
   color: #9d9c9c;
   display: block;
-  font: 16px/25px Ubuntu, sans-serif;
+  font: 16px/25px Ubuntu, Arial, Helvetica, sans-serif, sans-serif;
   margin: 0 0 7px 4.1%;
   outline: none;
   padding: 13px  15px 12px;
   width: 93.9%;
 }
-/* line 461, ../sass/styles.scss */
-.contact-us-details-input:nth-child(3) {
+/* line 462, ../sass/styles.scss */
+.contacts-form-input:nth-child(3) {
   height: 171px;
 }
 
-/* line 466, ../sass/styles.scss */
-.contact-us-details-submit {
+/*
+    strange centering because ~2-3px to the left from center on .psd
+    and additional wrapper elemnt needed to use padding-right
+*/
+/* line 471, ../sass/styles.scss */
+.contacts-form-submit {
   background: #f27554;
   border: none;
   border-radius: 4px;
   box-sizing: border-box;
   color: #fff;
+  cursor: pointer;
   display: block;
-  font: 20px MyriadPro, sans-serif;
+  font: 20px MyriadPro, Arial, Helvetica, sans-serif;
   outline: none;
   padding: 7px 0 13px 0;
   margin: 22px 0 0 49.8%;
@@ -540,17 +562,17 @@ a {
 }
 
 /*footer*/
-/* line 485, ../sass/styles.scss */
+/* line 491, ../sass/styles.scss */
 .footer {
   margin: 150px 0 0 0;
 }
 
-/* line 489, ../sass/styles.scss */
+/* line 495, ../sass/styles.scss */
 .footer-info {
   background: #f37b5c;
   box-sizing: border-box;
   color: #fef8f6;
-  font: 18px/18px MyriadPro, sans-serif;
+  font: 18px/18px MyriadPro, Arial, Helvetica, sans-serif;
   height: 56px;
   margin-bottom: 95px;
   padding: 18px 0 0 0;
@@ -558,28 +580,28 @@ a {
 }
 
 /*sprites*/
-/* line 504, ../sass/styles.scss */
+/* line 510, ../sass/styles.scss */
 .sprite {
   background-image: url(../img/spritesheet.png);
   background-repeat: no-repeat;
   display: inline-block;
 }
 
-/* line 510, ../sass/styles.scss */
+/* line 516, ../sass/styles.scss */
 .sprite-arrow {
   background-position: -5px -5px;
   height: 27px;
   width: 24px;
 }
 
-/* line 516, ../sass/styles.scss */
+/* line 522, ../sass/styles.scss */
 .sprite-code {
   background-position: -99px -5px;
   height: 25px;
   width: 34px;
 }
 
-/* line 522, ../sass/styles.scss */
+/* line 528, ../sass/styles.scss */
 .sprite-mail {
   background-position: -142px -4px;
   height: 25px;
@@ -587,28 +609,28 @@ a {
   width: 28px;
 }
 
-/* line 529, ../sass/styles.scss */
+/* line 535, ../sass/styles.scss */
 .sprite-mark {
   background-position: -182px -5px;
   height: 33px;
   width: 24px;
 }
 
-/* line 535, ../sass/styles.scss */
+/* line 541, ../sass/styles.scss */
 .sprite-menu {
   background-position: -215px -5px;
   height: 25px;
   width: 33px;
 }
 
-/* line 541, ../sass/styles.scss */
+/* line 547, ../sass/styles.scss */
 .sprite-phone {
   background-position: -258px -5px;
   height: 26px;
   width: 24px;
 }
 
-/* line 547, ../sass/styles.scss */
+/* line 553, ../sass/styles.scss */
 .sprite-phone2 {
   background-position: -290px -2px;
   height: 32px;
@@ -616,7 +638,17 @@ a {
 }
 
 /*helper classes*/
-/* line 554, ../sass/styles.scss */
+/* line 560, ../sass/styles.scss */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
+
+/* line 570, ../sass/styles.scss */
 .color-orange {
   color: #f36e49;
 }

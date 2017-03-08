@@ -4,29 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/screenWidth.js" defer></script>
+    <script src="/js/screenWidth.js" defer></script>
 </head>
 
 <body>
     <header class="main-header">
-
-        
-        <a href="#" class="logo">
-            <span class="color-orange">UI</span><span>Brush</span>
-        </a>
         
         <div class="hamburger"></div>
+        
+        <a href="javascript:void(0);" class="logo">
+            <span class="color-orange">UI</span><span>Brush</span>
+        </a>
 
         <nav class="main-nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="javascript:void(0);">Home</a></li>
+                <li><a href="javascript:void(0);">About us</a></li>
+                <li><a href="javascript:void(0);">Services</a></li>
+                <li><a href="javascript:void(0);">Portfolio</a></li>
+                <li><a href="javascript:void(0);">Contact us</a></li>
             </ul>
         </nav>
 
@@ -40,13 +39,19 @@
                 <p class="slide-info">We Provide Ultimate Templates</p>
             </div>
 
-            <i class="sprite sprite-arrow-left"></i>
-            <i class="sprite sprite-arrow-right"></i>         
-            
+            <a href="javascript:void(0);" class="sprite sprite-arrow-left"></a>
+            <a href="javascript:void(0);" class="sprite sprite-arrow-right"></a>
         </section>
-
-        <section class="below-slider">
-            <p class="below-slider-info">Lorem ipsum dolor sit amet <a class="below-slider-link" href="#">consectetuer adipiscing elit</a></p>
+        
+        <!--at this point I don`t know the exact porpose of this section,
+            except containig some valuable link
+            so it`s not obligatory must be learn-more-->
+        <section class="learn-more">
+            <p class="learn-more-info">Lorem ipsum dolor sit amet 
+                <a class="learn-more-link" href="javascript:void(0);">
+                    consectetuer adipiscing elit
+                </a>
+            </p>
         </section>
 
         <section class="about-uibrush">
@@ -57,71 +62,80 @@
         </section>
 
         <section class="features">
-            <div class="feature">
-                <i class="sprite sprite-menu"></i>
-                <h3 class="feature-heading">Innovative Design</h3>
-                <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
-            </div>
-            <div class="feature">
-                <i class="sprite sprite-code"></i>
-                <h3 class="feature-heading">Clean Coding</h3>
-                <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
-            </div>
-            <div class="feature">
-                <i class="sprite sprite-arrow"></i>
-                <h3 class="feature-heading">Quick Delivery</h3>
-                <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
-            </div>
-            <div class="feature">
-                <i class="sprite sprite-phone"></i>
-                <h3 class="feature-heading">Best Support</h3>
-                <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
-            </div>
+            <ul>
+                <li class="feature">
+                    <div class="sprite sprite-menu"></div>
+                    <h3 class="feature-heading">Innovative Design</h3>
+                    <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
+                </li>
+                <li class="feature">
+                    <div class="sprite sprite-code"></div>
+                    <h3 class="feature-heading">Clean Coding</h3>
+                    <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
+                </li>
+                <li class="feature">
+                    <div class="sprite sprite-arrow"></div>
+                    <h3 class="feature-heading">Quick Delivery</h3>
+                    <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
+                </li>
+                <li class="feature">
+                    <div class="sprite sprite-phone"></div>
+                    <h3 class="feature-heading">Best Support</h3>
+                    <p class="feature-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
+                </li>
+            </ul>
         </section>
 
         <section class="projects">
             <h2 class="projects-heading">Recent Projects</h2>
             <p class="projects-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-
-            <a href="#" class="project-link">
-                <figure class="project-link-figure">
-                    <img class="project-link-figure-image" src="../img/mobile/project-1.jpg" alt="portfolio item">
-                    <figcaption>
-                        <h3 class="project-link-figure-heading">Portfolio One</h3>
-                        <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
-                    </figcaption>
-                </figure>
-            </a>
-
-            <a href="#" class="project-link">
-                <figure class="project-link-figure">
-                    <img class="project-link-figure-image" src="../img/mobile/project-2.jpg" alt="portfolio item">
-                    <figcaption>
-                        <h3 class="project-link-figure-heading">Portfolio Two</h3>
-                        <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
-                    </figcaption>
-                </figure>
-            </a>
-
-            <a href="#" class="project-link">
-                <figure class="project-link-figure">
-                    <img class="project-link-figure-image" src="../img/mobile/project-3.jpg" alt="portfolio item">
-                    <figcaption>
-                        <h3 class="project-link-figure-heading">Portfolio Three</h3>
-                        <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
-                    </figcaption>
-                </figure>
-            </a>
-
-            <a href="#" class="project-link">
-                <figure class="project-link-figure">
-                    <img class="project-link-figure-image" src="../img/mobile/project-4.jpg" alt="portfolio item">
-                    <figcaption>
-                        <h3 class="project-link-figure-heading">Portfolio Four</h3>
-                        <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
-                    </figcaption>
-                </figure>
-            </a>
+            
+            <ul>
+                <li class="project-item">
+                    <a href="javascript:void(0);" class="project-link">
+                        <figure class="project-link-figure">
+                            <img class="project-link-figure-image" src="../img/mobile/project-1.jpg" alt="portfolio item">
+                            <figcaption>
+                                <h3 class="project-link-figure-heading">Portfolio One</h3>
+                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="project-item">
+                    <a href="javascript:void(0);" class="project-link">
+                        <figure class="project-link-figure">
+                            <img class="project-link-figure-image" src="../img/mobile/project-2.jpg" alt="portfolio item">
+                            <figcaption>
+                                <h3 class="project-link-figure-heading">Portfolio Two</h3>
+                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="project-item">
+                    <a href="javascript:void(0);" class="project-link">
+                        <figure class="project-link-figure">
+                            <img class="project-link-figure-image" src="../img/mobile/project-3.jpg" alt="portfolio item">
+                            <figcaption>
+                                <h3 class="project-link-figure-heading">Portfolio Three</h3>
+                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="project-item">
+                    <a href="javascript:void(0);" class="project-link">
+                        <figure class="project-link-figure">
+                            <img class="project-link-figure-image" src="../img/mobile/project-4.jpg" alt="portfolio item">
+                            <figcaption>
+                                <h3 class="project-link-figure-heading">Portfolio Four</h3>
+                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>    
         </section>
 
         <section class="talk-to-us">
@@ -130,8 +144,8 @@
                 alias suscipit error voluptas aut, consequuntur. Voluptates nam unde nemo, sapiente earum provident maiores error voluptas aut.</p>
         </section>
 
-        <section class="feedback">
-            <section class="contact-us">
+        <section class="contacts">
+            <div class="contact-us">
                 <h2 class="contact-us-heading">Contact Us</h2>
                 <p class="contact-us-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum eveniet vero animi libero sit architecto
                     dolorum harum repellendus impedit voluptatum, in sunt veritatis soluta! Earum sunt deleniti, ex error.
@@ -139,34 +153,36 @@
                     dolorum harum repellendus impedit voluptatum, in sunt veritatis soluta! Earum sunt deleniti, ex error.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum eveniet vero animi libero sit architecto
                     dolorum harum.</p>
-            </section>
+            </div>
 
-            <section class="contact-us-map">
-                <img class="contact-us-map-img" src="../img/mobile/map.jpg" alt="map">
-            </section>
+            <div class="contacts-map">
+                <img class="contacts-map-img" src="../img/mobile/map.jpg" alt="map">
+            </div>
 
-            <section class="contact-us-details">
-                <h3 class="contact-us-details-heading">Contact Details:</h3>
-                <p class="contact-us-details-contact">
-                    <i class="sprite sprite-phone2"></i>
+            <div class="contacts-details">
+                <h3 class="contacts-details-heading">Contact Details:</h3>
+                <p class="contacts-details-contact">
+                    <span class="sprite sprite-phone2"></span>
                     <span>(+91) 0975 720 3582</span>
                 </p>
-                <p class="contact-us-details-contact">
-                    <i class="sprite sprite-mail"></i>
+                <p class="contacts-details-contact">
+                    <span class="sprite sprite-mail"></span>
                     <span>Email@domain.com</span>
                 </p>
-                <p class="contact-us-details-contact">
-                    <i class="sprite sprite-mark"></i>
+                <p class="contacts-details-contact">
+                    <span class="sprite sprite-mark"></span>
                     <span>No.235, New St, 25<sup>th</sup> Sector, London, England</span>
-                </p>
-
-                <form class="contact-us-details-form" action="">
-                    <input class="contact-us-details-input" type="text" name="name" placeholder="Name">
-                    <input class="contact-us-details-input" type="email" name="email" placeholder="Email">
-                    <textarea class="contact-us-details-input" name="message" placeholder="Message"></textarea>
-                    <button class="contact-us-details-submit" type="submit" value="submit">Submit</button>
+                </p>                
+            </div>
+            
+            <div class="contacts-form">
+                <form action="">
+                    <input class="contacts-form-input" type="text" name="name" placeholder="Name">
+                    <input class="contacts-form-input" type="email" name="email" placeholder="Email">
+                    <textarea class="contacts-form-input" name="message" placeholder="Message"></textarea>
+                    <button class="contacts-form-submit" type="submit" value="submit">Submit</button>
                 </form>
-            </section>
+            </div>
         </section>
 
     </main>
@@ -174,7 +190,7 @@
     <footer class="footer">
         <p class="footer-info">Copyright &copy; 2015 Default Value.</p>
     </footer>
-
+    
 </body>
 
 </html>

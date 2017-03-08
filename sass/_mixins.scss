@@ -1,7 +1,7 @@
 //usage @include prop-val((color: red, width: 100px));
 @mixin prop-val($map) {
 	@if type-of($map) != 'map' {
-		@error "Зaram must be a map. Was #{$map} => #{type-of($map)}";
+		@error "Param must be a map. Was #{$map} => #{type-of($map)}";
 	}
 
 	$keys: map-keys($map);
