@@ -1,0 +1,61 @@
+@mixin styleProjectLinkFigureInfo {
+	$selector: '.project-link-figure-info';
+
+	#{$selector} {
+		/*mobile*/
+	    color: $projectLinkFigureInfo-TextColor;
+	    font: 18px/18px $primaryFont;
+	    letter-spacing: -.6px;
+	    padding: 3px 0 10px;
+	    text-align: center;	    
+		
+		/*tablet*/
+	    @media screen and (min-width: $tablet-Width) {
+	        font: 12px/18px $primaryFont;
+	        letter-spacing: 0;
+	        padding: 6px 0 7px;	        
+	    }
+		
+		/*desktop*/
+	    @media screen and (min-width: $desktop-Width) {
+	        text-align: right;        
+	    }
+	}
+
+	$mobile: (
+        (padding-left: 14px),
+        (padding-left: 16px),
+        (padding-left: 9px),
+        (padding-left: 1px)
+    );    
+
+    $tablet: (
+        (padding-left: 14px),
+        (padding-left: 0),
+        (padding-left: 9px),
+        (padding-left: 0, text-indent: - 10px)
+    );
+
+    $desktop: (
+        (padding: 6px 17px 7px 0),
+        (padding: 6px 20px 7px 0px),
+        (padding: 6px 15px 7px 0),
+        (padding: 6px 20px 7px 0)
+    );
+	
+	/*mobile*/
+    @include prop-val-loop($selector, $mobile);
+	
+	/*tablet*/
+    @media screen and (min-width: $tablet-Width) {
+        @include prop-val-loop($selector, $tablet);        
+    }
+	
+	/*desktop*/
+    @media screen and (min-width: $desktop-Width) {
+        @include prop-val-loop($selector, $desktop);      
+    }
+    
+}
+
+@include styleProjectLinkFigureInfo;

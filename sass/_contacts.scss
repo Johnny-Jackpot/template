@@ -1,0 +1,32 @@
+/*---contacts---*/
+.contacts {
+    @media screen and (min-width: $tablet-Width) {
+       padding: 0 100px 0 90px; 
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+       margin: 0 auto;
+       padding: 0 0 0 0;
+       width: 1170px;
+    }
+}
+
+@import "_contacts-contact-us";
+
+.contacts-map {
+    @media screen and (min-width: $tablet-Width) {
+        padding: 0 6px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        padding: 4px 0 0 1px;
+    }
+}
+
+.contacts-map-img {
+    width: 100%;
+}
+
+@import "_contacts-details";
+
+@import "_contacts-form";

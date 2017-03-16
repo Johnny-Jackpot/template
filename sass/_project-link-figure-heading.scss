@@ -1,0 +1,69 @@
+@mixin styleProjectLinkFigureHeading {
+	$selector: '.project-link-figure-heading';
+
+	#{$selector} {
+		/*mobile*/
+	    border-bottom: 1px solid $projectLinkFigureHeading-BorderColor;
+	    color: $projectLinkFigureHeading-TextColor;
+	    font: 24px/18px $primaryFont;
+	    letter-spacing: -1px;
+	    margin: 0 auto;
+	    text-align: center;
+	    width: 90%;    
+		
+		/**tablet*/
+	    @media screen and (min-width: $tablet-Width) {
+	        font: bold 16px/18px $primaryFont;
+	        letter-spacing: 0;	        
+	    }
+		
+		/*desktop*/
+	    @media screen and (min-width: $desktop-Width) {
+	        text-align: right;
+	    }
+
+	}
+
+	$mobile: (
+        (padding: 1px 0 6px, text-indent: 10px),
+        (padding: 2px 0 5px, text-indent: 7px),
+        (padding: 6px 0 1px, text-indent: 3px),
+        (letter-spacing: .3px,
+         padding: 7px 0 0,
+         text-indent: 10px,
+         word-spacing: -4px)
+    );    
+
+    $tablet: (
+        (padding: 4px 0 3px, text-indent: 7px),
+        (padding: 4px 0 3px, text-indent: -5px),
+        (padding: 4px 0 3px, text-indent: 7px),
+        (letter-spacing: 0,
+         padding: 4px 0 3px,
+         text-indent: -13px,
+         word-spacing: 0)
+    );
+
+    $desktop: (
+        (padding: 3px 17px 4px 0),
+        (padding: 4px 18px 3px 0),
+        (padding: 4px 11px 3px 0),
+        (padding: 4px 20px 3px 0)
+    );
+	
+	/*mobile*/
+    @include prop-val-loop($selector, $mobile);
+	
+	/*tablet*/
+    @media screen and (min-width: $tablet-Width) {
+        @include prop-val-loop($selector, $tablet);	        
+    }
+	
+	/*desktop*/
+    @media screen and (min-width: $desktop-Width) {
+        @include prop-val-loop($selector, $desktop);
+    }
+
+}
+
+@include styleProjectLinkFigureHeading;

@@ -1,0 +1,154 @@
+.contacts-details {
+    padding: 65px 0 0 0;
+
+    @media screen and (min-width: $tablet-Width) {
+        padding: 75px 0 0 0;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        padding: 0 0 0 0;
+    }
+}
+
+.contacts-details-heading {
+    color: $textColorSecondary;
+    display: block;
+    font: 48px $primaryFont;
+    letter-spacing: -1.5px;
+    margin: 0 auto 0;
+    text-align: center;
+    text-indent: 1px;
+    width: 73%;
+    word-spacing: -3px;
+
+    &:after {
+        background: $brandColorSecondary;
+        content: "";
+        display: block;
+        height: 2px;
+        margin: 6px auto 0;
+        width: 62%;
+    }
+
+    @media screen and (min-width: $tablet-Width) {
+        font: bold 30px $primaryFont;
+        letter-spacing: 0;
+        padding: 0 0 0 5px;
+        width: 100%;
+        word-spacing: 2px;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        font: 20px $primaryFont;
+        text-align: left;
+    }
+}
+
+.contacts-details-contact {
+    align-items: center;
+    color: $textColor;
+    display: flex;
+    flex-wrap: wrap;
+    font: 30px/25px $primaryFont;
+    margin-left: 11%;
+    letter-spacing: -1.3px;
+    width: 68%;
+
+    .sprite {
+        align-content: center;
+        margin-right: 42px;
+        width: 28px;
+    }
+
+    $margins: (
+        (margin-top: 82px),
+        (margin-top: 45px),
+        (margin-top: 49px)
+    );
+
+    @for $i from 1 through length($margins) {
+        &:nth-of-type(#{$i}) {
+            @include prop-val(nth($margins, $i));
+        }
+    }
+    
+
+    &:nth-of-type(3) sup {
+        vertical-align: super;
+        font-size: 20px;
+    }
+
+    &:nth-of-type(3) span:nth-of-type(2) {
+        max-width: 255px;
+        min-width: 78%;
+    }
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 16px/25px $primaryFont;
+        letter-spacing: 0;
+
+        .sprite {
+            margin-right: 23px;
+            transform: scale(.6);
+        }
+
+        &:nth-of-type(1) {
+            margin: 12px 0 0 27px;
+            order: 2;
+            width: 50%;
+
+            .sprite {
+                margin-right: 19px;
+            }
+        }
+
+        &:nth-of-type(2) {
+            margin: 15px 40px 0 0;
+            order: 3;
+            width: 195px;
+
+            .sprite {
+                margin: -3px 19px 0 4px;
+                transform: scale(.7);
+            }
+        }
+
+        &:nth-of-type(3) {
+            flex-wrap: nowrap;
+            margin: 39px auto 0;
+            order: 1;
+            padding: 0 27% 0 30%;
+
+            .sprite {
+                align-self: flex-start;
+            }
+
+            sup {
+                font-size: 10px;
+            }
+        }
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        &:nth-of-type(1) {
+            margin: 12px 0 0 42px;
+            order: 1;
+        }
+
+        &:nth-of-type(2) {
+            margin: 9px 40px 0 41px;
+            order: 2;
+        }
+
+        &:nth-of-type(3) {
+            margin: 9px 50px 0 46px;
+            order: 3;
+            padding: 0;
+            width: 255px;
+        }
+    }
+}

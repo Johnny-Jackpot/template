@@ -24,6 +24,8 @@ $logoColor: #4c4c4b;
 
 $mainHeader-ShadowColor: #cecece;
 
+$navLink-Color: #414141;
+
 $orange-TextColor: #f36e49;
 
 $projectLinkFirure-BG: 				  #eeeeee;
@@ -47,3 +49,11 @@ $whiteTextColor: #fff;
 $learnMore-Shadow: 0 -1px 0 1px $learnMore-ShadowColor;
 
 $mainHeader-Shadow: 0 1px 0 0px $mainHeader-ShadowColor;
+
+//@media
+$scrollBar-Width: 17px;
+
+$tablet-Width: 770px + $scrollBar-Width;
+
+$desktop-Width: 1170px + $scrollBar-Width;
+

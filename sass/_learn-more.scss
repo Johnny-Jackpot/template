@@ -1,0 +1,53 @@
+.learn-more {
+    background: $brandColor;
+    box-shadow: $learnMore-Shadow;
+    box-sizing: border-box;
+    height: 68px;
+    margin: 1px 0 0 0;
+    padding: 25px 0 0 0;
+
+    @media screen and (min-width: $tablet-Width) {
+        box-shadow: none;
+        height: 100px;
+        letter-spacing: 0;
+        margin: 0;
+        padding: 38px 0 0 0;
+        text-indent: 24px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        height: 99px;
+        padding: 36px 0 0 0;
+        text-indent: 0;
+    }
+}
+
+.learn-more-info,
+.learn-more-link {
+    color: $learnMore-TextColor;
+}
+
+.learn-more-info {
+    font: 14px $primaryFont;
+    text-align: center;
+    letter-spacing: .5px;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 20px $primaryFont;
+    }
+}
+
+.learn-more-link {
+    font: bold 15px $primaryFont;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: bold 23px $primaryFont;        
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        border-bottom: 1px solid $learnMore-TextColor;
+        text-decoration: none;
+    }
+}

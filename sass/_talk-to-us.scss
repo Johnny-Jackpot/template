@@ -1,0 +1,47 @@
+.talk-to-us {
+    background: $talkToUs-BG;
+    box-sizing: border-box;
+    color: $whiteTextColor;
+    padding: 78px 20px 81px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-Width) {
+        padding: 78px 100px 63px 90px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        padding: 78px 0 122px 0;
+    }
+}
+
+.talk-to-us-heading {
+    font: 60px $primaryFont;
+    margin: 0 0 40px;
+    text-indent: 1px;
+
+    @media screen and (min-width: $tablet-Width) {
+        margin: 0 0 30px;
+        text-indent: 14px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        margin: 0 auto 21px auto;
+        text-indent: 2px;
+        width: 1170px;
+    }
+}
+
+.talk-to-us-info {
+    font: 24px/25px $secondaryFont;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 16px/25px $primaryFont;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 110px;
+        width: 1170px;
+    }
+}

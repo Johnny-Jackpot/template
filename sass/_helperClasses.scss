@@ -1,0 +1,45 @@
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+}
+
+
+.color-orange {
+    color: $orange-TextColor;
+}
+
+.row {
+    @media screen and (min-width: $desktop-Width) {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+.column {
+	@media screen and (min-width: $desktop-Width) {
+		&:nth-of-type(1) {
+            margin: 0 24px 0 0;
+            width: 569px;
+        }
+
+        &:nth-of-type(2) {
+            width: 577px;
+        }
+	}
+}
+
+.flex-container {
+	@media screen and (min-width: $tablet-Width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.tablet-only {
+	display: none;
+}

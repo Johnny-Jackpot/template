@@ -1,0 +1,77 @@
+/*contacts form*/
+.contacts-form {
+    margin: 30px 0 0 0;
+
+    @media screen and (min-width: $tablet-Width) {
+        margin: 21px 0 0 0;
+    }   
+
+    @media screen and (min-width: $desktop-Width) {
+        margin: 14px 0 0 26px;
+    }   
+}
+
+.contacts-form-input {
+    background: $contactsFormInput-BG;
+    border: 1px solid $contactsFormInput-BorderColor;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $textColor;
+    display: block;
+    font: 16px/25px $primaryFont,sans-serif;
+    margin: 0 0 7px 4.1%;
+    outline: none;
+    padding: 13px  15px 12px;
+    width: 93.9%;
+
+    &:nth-child(3) {
+        height: 171px;
+    }
+
+    @media screen and (min-width: $tablet-Width) {
+        margin: 0 0 7px 4.4%;
+        width: 91.3%;
+    }  
+
+    @media screen and (min-width: $desktop-Width) {
+        width: 329px;
+
+        &:nth-child(3) {
+            width: 527px;
+        }
+    } 
+}
+
+.contacts-form-submit {
+    background: $contactsFormSubmit-BG;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: $whiteTextColor;
+    cursor: pointer;
+    display: block;
+    font: 20px $secondaryFont;
+    outline: none;
+    padding: 7px 0 13px 0;
+    margin: 22px auto 0;
+    max-width: 314px;
+    min-width: 60px;
+    transform: translateX(-.3%);
+    text-indent: -2px;
+    width: 65.4%;
+
+    @media screen and (min-width: $tablet-Width) {
+        padding: 10px 0 10px 0;
+        margin: 27px auto 0;
+        max-width: none;
+        transform: translateX(1px);
+        text-indent: 8px;
+        width: 393px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        padding: 10px 0 10px 0;
+        margin: 12px 0 0 23px;
+        width: 128px;
+    }
+}

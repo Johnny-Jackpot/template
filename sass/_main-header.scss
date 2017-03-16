@@ -1,0 +1,127 @@
+.main-header {
+    box-shadow: $mainHeader-Shadow;
+    height: 234px;
+    overflow: hidden;
+
+    @media screen and (min-width: $tablet-Width) {
+        height: 86px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        box-shadow: none;
+        height: 89px;
+    }
+}
+
+/*hide nav for mobile*/
+.main-nav {
+    display: none;
+
+    @media screen and (min-width: $tablet-Width) {
+        display: block;
+        float: right;
+        margin: 35px 4.3% 0 0;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        margin: 36px 4.5% 0 0;
+    }
+}
+
+.main-nav-item {
+    @media screen and (min-width: $tablet-Width) {
+        display: inline-block;
+        
+        $margins: (
+            (margin: 0),
+            (margin: 0 0 0 24px),
+            (margin: 0 0 0 33px),
+            (margin: 0 0 0 36px),
+            (margin: 0 0 0 35px),
+        );
+        
+        @for $i from 1 through length($margins) {
+            &:nth-child(#{$i}) {
+                $item: nth($margins, $i);
+                @include prop-val($item);
+            }
+        }
+    }
+}
+
+.main-nav-link {
+    @media screen and (min-width: $tablet-Width) {
+        color: $navLink-Color;
+        font: bold 15px $primaryFont;
+        text-transform: uppercase;
+
+        &.active-link {
+            border-bottom: 2px solid $brandColor;
+
+            &:after {
+                border: 3px solid $brandColor;
+                border-left-color: transparent;
+                border-top-color: transparent;
+                content: "";
+                display: block;
+                height: 0;
+                margin: -1px auto 0;
+                transform: rotate(45deg);
+                width: 0;
+            }
+        }
+    }
+}
+
+/*logo*/
+.logo {
+    color: $logoColor;
+    display: block;
+    font: 72px $secondaryFont;
+    margin: 68px auto 0;
+    width: 235px;
+    text-decoration: none;
+
+    @media screen and (min-width: $tablet-Width) {
+        float: left;
+        font: bold 36px $primaryFont;
+        margin: 20px 0 0 6%;
+        width: 130px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        font: 22px $primaryFont;
+        margin: 31px 0 0 2.6%;
+    }
+}
+
+
+/*nav toggle button for mobile*/
+.hamburger {
+    background-color: $brandColor;
+    height: 5px;
+    float: right;
+    margin: 34px 5.3% 0 0;
+    width: 45px;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+    }
+
+    &:before {
+        @extend .hamburger;
+        margin: -10px 0 0 0;
+    }
+
+    &:after {
+        @extend .hamburger;
+        margin: 10px 0 0 0;
+    }
+
+    @media screen and (min-width: $tablet-Width) {
+        display: none;
+    }
+    
+}

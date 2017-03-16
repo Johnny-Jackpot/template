@@ -1,0 +1,59 @@
+.about-uibrush {
+    box-sizing: border-box;
+    padding: 42px 25px 31px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-Width) {
+        box-sizing: border-box;
+        height: 265px;
+        padding: 46px 100px 10px 90px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        height: 224px;
+        margin: 0 auto;
+        padding: 51px 0 10px 0;
+        width: 1170px;
+    }
+}
+
+.about-uibrush-heading {
+    border-bottom: 2px solid $brandColorSecondary;
+    box-sizing: border-box;
+    color: $textColorSecondary;
+    display: inline-block;
+    font: bold 26px $primaryFont;
+    margin: 0 0 15px -1px;
+
+    @media screen and (min-width: $tablet-Width) {
+        border-bottom: none;
+        font: bold 30px $primaryFont;
+        letter-spacing: .4px;
+        margin: 0 0 33px 3px;
+
+        /*line below heading for tablet and for mobile is different*/
+        &:after {
+            background: $brandColorSecondary;
+            content: "";
+            display: block;
+            height: 2px;
+            margin: 0 auto;
+            transform: translateX(-1px);
+            width: 94px;
+        }
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        font: bold 26px $primaryFont;
+        margin: 0 0 33px 1px;
+    }
+}
+
+.about-uibrush-text {
+    color: $textColor;
+    font: 18px/25px $primaryFont;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 16px/25px $primaryFont;
+    }
+}

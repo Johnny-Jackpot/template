@@ -1,0 +1,35 @@
+.footer {
+    margin: 150px 0 0 0;
+
+    @media screen and (min-width: $tablet-Width) {
+        margin: 129px 0 0 0;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        margin: 215px 0 0 0;
+    }
+}
+
+.footer-info {
+    background: $brandColorSecondary;
+    box-sizing: border-box;
+    color: $footerInfo-TextColor;
+    font: 18px/18px $secondaryFont;
+    height: 56px;
+    margin-bottom: 95px;
+    padding: 18px 0 0 0;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 14px/18px $secondaryFont;
+        margin-bottom: 55px;
+        padding: 17px 0 0 0;
+        text-indent: 6px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        margin-bottom: 72px;
+        padding: 18px 0 0 0;
+        text-indent: 0;
+    }
+}

@@ -1,0 +1,71 @@
+/*contacts contact us*/
+.contact-us {
+    box-sizing: border-box;
+    padding: 54px 20px 112px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-Width) {
+        padding: 75px 0 27px;  
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        padding: 107px 0 49px;  
+    }
+}
+
+.contact-us-heading {
+    color: $textColorSecondary;
+    font: 48px $primaryFont;
+    letter-spacing: -1.5px;
+    padding: 0 0 1px 0;
+    text-indent: -3px;
+    word-spacing: -2px;
+
+    &:after {
+        background: $brandColorSecondary;
+        content: "";
+        display: block;
+        height: 2px;
+        margin: 1px auto 0;
+        width: 215px;
+    }
+
+    @media screen and (min-width: $tablet-Width) {
+       font: bold 30px $primaryFont;
+       letter-spacing: 0;
+       word-spacing: 0;
+       text-indent: 5px;
+
+       &:after {
+           margin: 7px auto 0;
+           transform: translateX(-1px);
+           width: 127px;
+       }
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        font: bold 26px $primaryFont;
+
+        &:after {
+           margin: 0 auto;
+           transform: translateX(4px);
+           width: 127px;
+        }
+    }
+}
+
+.contact-us-info {
+    color: $textColor;
+    font: 25px/25px $primaryFont;
+    margin: 57px 0 0 0;
+
+    @media screen and (min-width:$tablet-Width) {
+        font: 16px/25px $primaryFont;
+        margin: 28px 0 0 0;
+    }
+
+    @media screen and (min-width:$desktop-Width) {
+        font: 16px/25px $primaryFont;
+        margin: 17px 0 0 0;
+    }
+}

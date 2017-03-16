@@ -1,0 +1,110 @@
+.features {
+    border-bottom: 8px solid $brandColor;
+    border-top: 8px solid $brandColor;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 16% 50px 19%;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-Width) {
+        border: none;
+        padding: 23px 100px 50px 90px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        margin: 0 auto;
+        padding: 23px 27px 47px 14px;
+        width: 1170px;
+    }
+}
+
+.feature-heading {
+    color: $featureHeading-TextColor;
+    font: 24px $secondaryFont;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 20px $secondaryFont;
+    }
+
+}
+
+.feature-info {
+    color: $textColor;
+    font: 18px/18px $primaryFont;
+    height: 72px;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 12px/18px $primaryFont;
+        text-align: left;
+    }
+}
+
+.feature {
+    @media screen and (max-width: $tablet-Width - 1px) {
+    
+        $margins: (
+            ('feature': (49px 0 0 0), 'sprite': (0 0 0 -6px),  'heading': (12px 0 10px 3px)),
+            ('feature': (32px 0 0 0), 'sprite': (0 0 0 -17px), 'heading': (6px 0 13px -15px)),
+            ('feature': (43px 0 0 0), 'sprite': (0 0 0 -15px), 'heading': (13px 0 9px -15px)),
+            ('feature': (38px 0 0 0), 'sprite': (0 0 0 -3px),  'heading': (9px 0 13px -15px))
+        ); 
+
+        @include setFeaturesMargins($margins);       
+    }
+
+
+    @media screen and (min-width: $tablet-Width) and (max-width: $desktop-Width - 1px) {
+        width: 39%;
+
+        /*change order of features for tablet view*/
+        $order: (
+            (order: 1),
+            (order: 3),
+            (order: 4),
+            (order: 2)
+        );
+
+        @for $j from 1 through length($order) {
+            &:nth-of-type(#{$j}) {
+                $itemOrder: nth($order, $j);
+                @include prop-val($itemOrder);
+            }
+        }
+        
+        /*feature margins for tablet view*/
+        /*
+            pay attention that here we set margins in source order
+            but earlier we change display order in flex container
+        */
+        $marginsTablet: (
+            /*innovative design*/
+            ('feature': (0 0 61px 0), 'sprite': (0 0 0 20px),  'heading': (11px 0 15px 17px)),
+            /*clean coding*/
+            ('feature': (0 0 0 0), 'sprite': (0 0 0 5px), 'heading': (9px 0 15px 0)),
+            /*quick delivery*/
+            ('feature': (0 0 0 0), 'sprite': (-1px 0 0 -6px), 'heading': (8px 0 15px 0)),
+            /*best support*/
+            ('feature': (0 0 61px 0), 'sprite': (0 0 0 -4px),  'heading': (10px 0 15px -13px))
+        ); 
+
+        @include setFeaturesMargins($marginsTablet); 
+        
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        width: 225px;
+
+        $marginsDesktop: (
+            ('feature': (0 0 0 0), 'sprite': (0 0 0 18px), 'heading': (11px 0 15px 14px)),
+            ('feature': (0 0 0 7px), 'sprite': (2px 0 0 7px), 'heading': (9px 0 15px 0)),
+            ('feature': (0 0 0 0), 'sprite': (1px 0 0 -1px), 'heading': (8px 0 15px 3px)),
+            ('feature': (0 0 0 0), 'sprite': (0 0 0 -3px), 'heading': (10px 0 15px -12px))
+        );
+
+        @include setFeaturesMargins($marginsDesktop);
+        
+    }
+    
+}

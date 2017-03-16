@@ -1,0 +1,106 @@
+.projects {
+    box-sizing: border-box;
+    padding: 0 0 114px 0;
+
+    @media screen and (min-width: $tablet-Width) {
+        padding: 0 102px 104px 89px;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        margin: 0 auto;
+        padding: 0 10px 106px 9px;
+        width: 1170px;
+    }
+}
+
+.projects-heading {
+    color: $textColorSecondary;
+    font: bold 26px $primaryFont;
+    letter-spacing: .3px;
+    margin: 77px 0 20px -2px;
+    padding: 0 0 1px 0;
+    text-align: center;
+
+    &:after {
+       background: $brandColorSecondary;
+       content: "";
+       display: block;
+       height: 2px;
+       margin: 1px auto 0;
+       width: 189px;
+   }
+
+    @media screen and (min-width: $tablet-Width) {
+        border: none;
+        font: bold 30px $primaryFont;
+        margin: 20px 0 13px 14px;
+        padding: 0;
+
+       &:after {
+           background: $brandColorSecondary;
+           content: "";
+           display: block;
+           height: 2px;
+           margin: 4px auto 0;
+           transform: translateX(1px);
+       }
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        font: bold 26px $primaryFont;
+        margin: 0 0 13px -1px;
+
+        &:after {
+            margin: 1px auto 0;
+        }
+    }
+}
+
+.projects-about {
+    color: $textColor;
+    font: 18px/25px $secondaryFont;
+    height: 50px;
+    margin: 0 0 0 11%;
+    overflow: hidden;
+    text-align: center;
+    width: 76.8%;
+    word-wrap: break-word;
+
+    @media screen and (min-width: $tablet-Width) {
+        font: 16px/25px $primaryFont;
+        margin: 0;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $desktop-Width) {
+        margin: 20px auto 25px;
+        padding: 0 1px 0 0;
+        width: 676px;
+    }
+}
+
+/*  .project-item   */
+@import "_project-item";
+
+.project-link {
+    display: block;
+}
+
+.project-link-figure{
+    background: $projectLinkFirure-BG;
+    border: 1px solid $projectLinkFigure-BorderColor;
+    display: inline-block;
+    width: 100%;
+}
+
+.project-link-figure-image {
+    border-top: 1px solid $projectLinkFigureImage-BorderColor;
+    border-bottom: 1px solid $projectLinkFigureImage-BorderColor;
+    width: 100%;
+}
+
+/*  .project-link-figure-heading  */
+@import "_project-link-figure-heading";
+
+/*  .project-link-figure-info  */
+@import "_project-link-figure-info";

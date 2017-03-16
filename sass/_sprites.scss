@@ -1,0 +1,48 @@
+.sprite {
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-arrow {
+    background-position: -5px -5px;
+    height: 27px;
+    width: 24px;
+}
+
+.sprite-code {
+    background-position: -99px -5px;
+    height: 25px;
+    width: 34px;
+}
+
+.sprite-mail {
+    background-position: -142px -4px;
+    height: 25px;
+    transform: translateY(-4px);
+    width: 28px;
+}
+
+.sprite-mark {
+    background-position: -182px -5px;
+    height: 33px;
+    width: 24px;
+}
+
+.sprite-menu {
+    background-position: -215px -5px;
+    height: 25px;
+    width: 33px;
+}
+
+.sprite-phone {
+    background-position: -258px -5px;
+    height: 26px;
+    width: 24px;
+}
+
+.sprite-phone2 {
+    background-position: -290px -2px;
+    height: 32px;
+    width: 28px;
+}

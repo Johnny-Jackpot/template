@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header clearfix">
         
         <div class="hamburger"></div>
         
@@ -21,11 +21,21 @@
 
         <nav class="main-nav">
             <ul>
-                <li><a href="javascript:void(0);">Home</a></li>
-                <li><a href="javascript:void(0);">About us</a></li>
-                <li><a href="javascript:void(0);">Services</a></li>
-                <li><a href="javascript:void(0);">Portfolio</a></li>
-                <li><a href="javascript:void(0);">Contact us</a></li>
+                <li class="main-nav-item">
+                    <a href="javascript:void(0);" class="main-nav-link active-link">Home</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="javascript:void(0);" class="main-nav-link">About us</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="javascript:void(0);" class="main-nav-link">Services</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="javascript:void(0);" class="main-nav-link">Portfolio</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="javascript:void(0);" class="main-nav-link">Contact us</a>
+                </li>
             </ul>
         </nav>
 
@@ -37,8 +47,9 @@
             <div class="slide">
                 <p class="slide-info">Welcome To UIBrush</p>
                 <p class="slide-info">We Provide Ultimate Templates</p>
+                <p class="slide-info tablet-only">We Provide Ultimate PSD Templates</p>
             </div>
-
+            
             <a href="javascript:void(0);" class="sprite sprite-arrow-left"></a>
             <a href="javascript:void(0);" class="sprite sprite-arrow-right"></a>
         </section>
@@ -62,7 +73,7 @@
         </section>
 
         <section class="features">
-            <ul>
+            <ul class="flex-container">
                 <li class="feature">
                     <div class="sprite sprite-menu"></div>
                     <h3 class="feature-heading">Innovative Design</h3>
@@ -88,49 +99,49 @@
 
         <section class="projects">
             <h2 class="projects-heading">Recent Projects</h2>
-            <p class="projects-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+            <p class="projects-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua.</p>
             
-            <ul>
-                <li class="project-item">
+            <ul class="flex-container">
+                <li class="project-item project-item-n1">
                     <a href="javascript:void(0);" class="project-link">
                         <figure class="project-link-figure">
-                            <img class="project-link-figure-image" src="../img/mobile/project-1.jpg" alt="portfolio item">
+                            <img class="project-link-figure-image" src="/img/mobile/project-1.jpg" alt="portfolio item">
                             <figcaption>
-                                <h3 class="project-link-figure-heading">Portfolio One</h3>
-                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                                <h3 class="project-link-figure-heading project-link-figure-heading-n1">Portfolio One</h3>
+                                <p class="project-link-figure-info project-link-figure-info-n1">Lorem ipsum dolor sit amet.</p>
                             </figcaption>
                         </figure>
                     </a>
                 </li>
-                <li class="project-item">
+                <li class="project-item project-item-n2">
                     <a href="javascript:void(0);" class="project-link">
                         <figure class="project-link-figure">
-                            <img class="project-link-figure-image" src="../img/mobile/project-2.jpg" alt="portfolio item">
+                            <img class="project-link-figure-image" src="/img/mobile/project-2.jpg" alt="portfolio item">
                             <figcaption>
-                                <h3 class="project-link-figure-heading">Portfolio Two</h3>
-                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                                <h3 class="project-link-figure-heading project-link-figure-heading-n2">Portfolio Two</h3>
+                                <p class="project-link-figure-info project-link-figure-info-n2">Lorem ipsum dolor sit amet.</p>
                             </figcaption>
                         </figure>
                     </a>
                 </li>
-                <li class="project-item">
+                <li class="project-item project-item-n3">
                     <a href="javascript:void(0);" class="project-link">
                         <figure class="project-link-figure">
-                            <img class="project-link-figure-image" src="../img/mobile/project-3.jpg" alt="portfolio item">
+                            <img class="project-link-figure-image" src="/img/mobile/project-3.jpg" alt="portfolio item">
                             <figcaption>
-                                <h3 class="project-link-figure-heading">Portfolio Three</h3>
-                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                                <h3 class="project-link-figure-heading project-link-figure-heading-n3">Portfolio Three</h3>
+                                <p class="project-link-figure-info project-link-figure-info-n3">Lorem ipsum dolor sit amet.</p>
                             </figcaption>
                         </figure>
                     </a>
                 </li>
-                <li class="project-item">
+                <li class="project-item project-item-n4">
                     <a href="javascript:void(0);" class="project-link">
                         <figure class="project-link-figure">
-                            <img class="project-link-figure-image" src="../img/mobile/project-4.jpg" alt="portfolio item">
+                            <img class="project-link-figure-image" src="/img/mobile/project-4.jpg" alt="portfolio item">
                             <figcaption>
-                                <h3 class="project-link-figure-heading">Portfolio Four</h3>
-                                <p class="project-link-figure-info">Lorem ipsum dolor sit amet.</p>
+                                <h3 class="project-link-figure-heading project-link-figure-heading-n4">Portfolio Four</h3>
+                                <p class="project-link-figure-info project-link-figure-info-n4">Lorem ipsum dolor sit amet.</p>
                             </figcaption>
                         </figure>
                     </a>
@@ -154,35 +165,52 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum eveniet vero animi libero sit architecto
                     dolorum harum.</p>
             </div>
+        
+            <div class="row">
 
-            <div class="contacts-map">
-                <img class="contacts-map-img" src="../img/mobile/map.jpg" alt="map">
-            </div>
+                <div class="column">
 
-            <div class="contacts-details">
-                <h3 class="contacts-details-heading">Contact Details:</h3>
-                <p class="contacts-details-contact">
-                    <span class="sprite sprite-phone2"></span>
-                    <span>(+91) 0975 720 3582</span>
-                </p>
-                <p class="contacts-details-contact">
-                    <span class="sprite sprite-mail"></span>
-                    <span>Email@domain.com</span>
-                </p>
-                <p class="contacts-details-contact">
-                    <span class="sprite sprite-mark"></span>
-                    <span>No.235, New St, 25<sup>th</sup> Sector, London, England</span>
-                </p>                
-            </div>
+                    <div class="contacts-map">
+                        <picture>
+                            <source media="(min-width: 770px)" srcset="/img/tablet/tablet-map.jpg">
+                            <source media="(min-width: 1170px)" srcset="/img/desktop/desktop-map.jpg">
+                            <img class="contacts-map-img" src="/img/mobile/map.jpg" alt="map">
+                        </picture>
+                    </div>
+
+                </div><!-- end column-->
+
+                <div class="column">
+
+                    <div class="contacts-details flex-container">
+                        <h3 class="contacts-details-heading">Contact Details:</h3>
+                        <p class="contacts-details-contact">
+                            <span class="sprite sprite-phone2"></span>
+                            <span>(+91) 0975 720 3582</span>
+                        </p>
+                        <p class="contacts-details-contact">
+                            <span class="sprite sprite-mail"></span>
+                            <span>Email@domain.com</span>
+                        </p>
+                        <p class="contacts-details-contact">
+                            <span class="sprite sprite-mark"></span>
+                            <span>No.235, New St, 25<sup>th</sup> Sector, London, England</span>
+                        </p>                
+                    </div>
+                    
+                    <div class="contacts-form">
+                        <form action="">
+                            <input class="contacts-form-input" type="text" name="name" placeholder="Name">
+                            <input class="contacts-form-input" type="email" name="email" placeholder="Email">
+                            <textarea class="contacts-form-input" name="message" placeholder="Message"></textarea>
+                            <button class="contacts-form-submit" type="submit" value="submit">Submit</button>
+                        </form>
+                    </div>
+
+                </div><!-- end column-->
+
+            </div><!-- end row --> 
             
-            <div class="contacts-form">
-                <form action="">
-                    <input class="contacts-form-input" type="text" name="name" placeholder="Name">
-                    <input class="contacts-form-input" type="email" name="email" placeholder="Email">
-                    <textarea class="contacts-form-input" name="message" placeholder="Message"></textarea>
-                    <button class="contacts-form-submit" type="submit" value="submit">Submit</button>
-                </form>
-            </div>
         </section>
 
     </main>
@@ -190,7 +218,7 @@
     <footer class="footer">
         <p class="footer-info">Copyright &copy; 2015 Default Value.</p>
     </footer>
-    
+  
 </body>
 
 </html>

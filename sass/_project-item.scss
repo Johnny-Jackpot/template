@@ -1,0 +1,59 @@
+@mixin styleProjectItem {
+    $selector: '.project-item';
+
+    #{$selector} {
+        /*Mobile*/
+        display: block;
+        margin: 0 auto;
+        padding-right: 11px;
+        min-width: 250px;
+        width: 52.2%;
+        
+        /*Tablet*/
+        @media screen and (min-width: $tablet-Width) and (max-width: $desktop-Width - 1px){
+            padding: 0;
+            width: 43.17%;
+        }
+
+        /*Desktop*/
+        @media screen and (min-width: $desktop-Width) {
+            width: 250px;
+        }
+        
+    }
+     
+    $Mobile: (
+        ('margin-top': 78px),
+        ('margin-top': 58px),
+        ('margin-top': 68px),
+        ('margin-top': 67px)
+    );
+
+    $Tablet: (
+        (margin: 38px 0 0 0),
+        (margin: 38px 0 0 0),
+        (margin: 49px 0 0 0),
+        (margin: 49px -1px 0 0)
+    );
+
+    $Desktop: (
+        (margin: 0 0 0 0, padding: 0 0 0 0),
+        (margin: 0 0 0 -3px, padding: 0 0 0 0),
+        (margin: 0 0 0 -3px, padding: 0 0 0 0),
+        (margin: 0 0 0 0, padding: 0 0 0 0)
+    );
+
+    @include prop-val-loop($selector, $Mobile);    
+
+    /* Tablet */
+    @media screen and (min-width: $tablet-Width) and (max-width: $desktop-Width - 1px){
+        @include prop-val-loop($selector, $Tablet);
+    }
+
+    /* Desktop */
+    @media screen and (min-width: $desktop-Width) {
+        @include prop-val-loop($selector, $Desktop);
+    }
+}
+
+@include styleProjectItem;
