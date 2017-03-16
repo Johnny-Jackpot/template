@@ -1,1 +1,1 @@
-<p>Template for mobile viewport. Width: 479px. For tablet and desctop coming soon.</p>
+<p>html/css template, rwd, 479px, 770px, 1170px+</p>
