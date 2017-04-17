@@ -33,3 +33,17 @@
 	});
 
 })();
+
+var mainSlider = $('#mainSlider').sly({
+	left: '#mainSliderLeft',
+	right: '#mainSliderRight',
+	slides: '#mainSlider .slide',
+	interval: 10000,
+});
+
+var secondarySlider = $('#slider2').sly({
+	left: '#left2',
+	right: '#right2',
+	slides: '#slider2 div',
+	interval: 5000
+});

@@ -34,12 +34,17 @@ module.exports = function (grunt) {
                 // See https://github.com/gruntjs/grunt-contrib-watch#files
                 files: [
                     'index.html',
-                    'css/*.css',
+                    'css/*.css',                    
                 ],
 
                 options: {
                     livereload: true
                 }
+            },
+
+            scripts: {
+                files: ['scripts/*.js'],
+                tasks: ['jshint', 'uglify']
             }
         },
 
@@ -67,6 +72,30 @@ module.exports = function (grunt) {
                 tasks: ['compass', 'server'],
                 options: {
                     logConcurrentOutput: true
+                }
+            }
+        },
+
+        jshint: {
+            options: {
+                force: true,
+                curly: true,
+                eqeqeq: true,
+                eqnull: true,
+                browser: true,
+                globals: {
+                    jQuery: true
+                }
+            },
+            files: {
+                src: ['js/*.js']
+            }
+        },
+
+        uglify: {
+            main: {
+                files: {
+                    'js/app.min.js': ['scripts/main.js']
                 }
             }
         }              

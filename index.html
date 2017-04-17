@@ -6,8 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/reset.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/screenWidth.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 </head>
 
 <body>
@@ -43,15 +42,70 @@
 
     <main>
 
-        <section class="slider">
+        <section id="mainSlider" class="slider">
+            <!-- slide 1 -->
             <div class="slide">
+                <picture class="slide-picture">
+                    <source media="(min-width: 770px)" srcset="/img/tablet/tablet-slide-1.jpg">
+                    <source media="(min-width: 1170px)" srcset="/img/desktop/desktop-slide-1.jpg">
+                    <img class="slide-image" src="/img/mobile/slide-1.jpg" alt="slide">
+                </picture>
+
                 <p class="slide-info">Welcome To UIBrush</p>
                 <p class="slide-info">We Provide Ultimate Templates</p>
-                <p class="slide-info tablet-only">We Provide Ultimate PSD Templates</p>
+                <p class="slide-info tablet-only">We Provide Ultimate PSD Templates</p>                               
+            </div>
+            <!-- slide 2 -->
+            <div class="slide">
+                <picture class="slide-picture">
+                    <source media="(min-width: 770px)" srcset="/img/tablet/tablet-slide-1.jpg">
+                    <source media="(min-width: 1170px)" srcset="/img/desktop/desktop-slide-1.jpg">
+                    <img class="slide-image" src="/img/mobile/slide-1.jpg" alt="slide">
+                </picture>
+                                
+                <p class="slide-info">Welcome To UIBrush</p>
+                <p class="slide-info">We Provide Ultimate Templates</p>
+                <p class="slide-info tablet-only">We Provide Ultimate PSD Templates</p>                               
+            </div>
+            <!-- slide 3 -->
+            <div class="slide">
+                <picture class="slide-picture">
+                    <source media="(min-width: 770px)" srcset="/img/tablet/tablet-slide-1.jpg">
+                    <source media="(min-width: 1170px)" srcset="/img/desktop/desktop-slide-1.jpg">
+                    <img class="slide-image" src="/img/mobile/slide-1.jpg" alt="slide">
+                </picture>
+                                
+                <p class="slide-info">Welcome To UIBrush</p>
+                <p class="slide-info">We Provide Ultimate Templates</p>
+                <p class="slide-info tablet-only">We Provide Ultimate PSD Templates</p>                               
+            </div>
+            <!-- slide 4 -->
+            <div class="slide">
+                <picture class="slide-picture">
+                    <source media="(min-width: 770px)" srcset="/img/tablet/tablet-slide-1.jpg">
+                    <source media="(min-width: 1170px)" srcset="/img/desktop/desktop-slide-1.jpg">
+                    <img class="slide-image" src="/img/mobile/slide-1.jpg" alt="slide">
+                </picture>
+                                
+                <p class="slide-info">Welcome To UIBrush</p>
+                <p class="slide-info">We Provide Ultimate Templates</p>
+                <p class="slide-info tablet-only">We Provide Ultimate PSD Templates</p>                               
+            </div>
+            <!-- slide 5 -->
+            <div class="slide">
+                <picture class="slide-picture">
+                    <source media="(min-width: 770px)" srcset="/img/tablet/tablet-slide-1.jpg">
+                    <source media="(min-width: 1170px)" srcset="/img/desktop/desktop-slide-1.jpg">
+                    <img class="slide-image" src="/img/mobile/slide-1.jpg" alt="slide">
+                </picture>
+                                
+                <p class="slide-info">Welcome To UIBrush</p>
+                <p class="slide-info">We Provide Ultimate Templates</p>
+                <p class="slide-info tablet-only">We Provide Ultimate PSD Templates</p>                               
             </div>
             
-            <a href="javascript:void(0);" class="sprite sprite-arrow-left"></a>
-            <a href="javascript:void(0);" class="sprite sprite-arrow-right"></a>
+            <span id="mainSliderLeft" class="sprite sprite-arrow-left"></span>
+            <span id="mainSliderRight" class="sprite sprite-arrow-right"></span>
         </section>
         
         <!--at this point I don`t know the exact porpose of this section,
@@ -215,10 +269,43 @@
 
     </main>
 
+    
+
     <footer class="footer">
         <p class="footer-info">Copyright &copy; 2015 Default Value.</p>
     </footer>
-  
+
+    <div id="slider2" style="background: #98bf21; 
+            height: 100px;            
+            position: relative; 
+            opacity: 0.3;
+            overflow: hidden;
+            border: 1px solid black; 
+            margin: 20px auto;
+            width: 50%; ">
+        <div style="background: red;
+            height: 100px;
+            position: absolute;
+            width: 100%;">1</div>
+        <div style="background: yellow;
+            height: 100px;
+            position: absolute;
+            width: 100%;">2</div>
+        <div style="background: pink;
+            height: 100px;
+            position: absolute;
+            width: 100%;">3</div>
+        <div style="background: lightblue;
+            height: 100px;
+            position: absolute;
+            width: 100%;">4</div>
+    </div>
+    <button id="left2">left</button>
+    <button id="right2">right</button>
+
+    <script src="/js/jquery-3.2.0.js" defer></script>
+    <script src="/js/sly.js" defer></script>
+    <script src="/js/app.min.js" defer></script>
 </body>
 
 </html>

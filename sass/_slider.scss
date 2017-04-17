@@ -1,37 +1,49 @@
 .slider {
+    height: 336px;
+    overflow: hidden;
     position: relative;
 
     @media screen and (min-width: $tablet-Width) {
+        height: 487px;
         margin: 1px 0 0 0;
     }
 
     @media screen and (min-width: $desktop-Width) {
+        height: 489px;
         margin: 0;
     }    
 
 }
 
 .slide {
-    background: url(../img/mobile/slide-1.jpg) no-repeat;
-    background-size: cover;
     box-sizing: border-box;
+    height: 336px;
+    overflow: hidden;
     padding: 144px 0 101px 0;
+    position: absolute;
     text-align: center;
     width: 100%;
 
     @media screen and (min-width: $tablet-Width) {
-        background: url(/img/tablet/tablet-slide-1.jpg) no-repeat;
-        background-size: cover;        
         height: 487px;
         padding: 208px 0 0 0;
     }
 
     @media screen and (min-width: $desktop-Width) {
-        background: url(/img/desktop/desktop-slide-1.jpg) center no-repeat;
-        background-size: cover;
         height: 489px;
         padding: 209px 0 0 0;
     }
+}
+
+.slide-picture {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.slide-image {    
+    width: 100%;
 }
 
 .slide-info {
@@ -40,6 +52,7 @@
     font: 18px $primaryFont;
     margin: 0 auto 11px auto;
     padding: 6px 0 7px;
+    transform: translateX(0%);
     width: 53%;
 
     @media screen and (min-width: $tablet-Width) {
