@@ -32,19 +32,20 @@ module.exports = function (grunt) {
                 // or an Array of String for multiple entries
                 // You can use globing patterns like `css/**/*.css`
                 // See https://github.com/gruntjs/grunt-contrib-watch#files
-                files: [
-                    'index.html',
-                    'css/*.css',                    
-                ],
-
+                files: ['index.html'],
                 options: {
                     livereload: true
                 }
             },
 
             scripts: {
-                files: ['scripts/*.js'],
+                files: ['src/js/*.js'],
                 tasks: ['jshint', 'uglify']
+            },
+
+            css: {
+                files: ['src/css/*.css'],
+                tasks: ['cmq']
             }
         },
 
@@ -59,11 +60,22 @@ module.exports = function (grunt) {
         compass: {
             dist: {
                 options: {
-                    sassDir: 'sass',
-                    cssDir: 'css',
+                    sassDir: 'src/sass',
+                    cssDir: 'src/css',
                     watch: true,
                     outputStyle: 'expanded'
                 }
+            }
+        },
+        //combine media queries
+        cmq: {
+            options: {
+                log: true
+            },
+            my_target: {
+                  files: {
+                    'css': ['src/css/*.css']
+                  }
             }
         },
 
@@ -88,14 +100,14 @@ module.exports = function (grunt) {
                 }
             },
             files: {
-                src: ['js/*.js']
+                src: ['src/js/*.js']
             }
         },
 
         uglify: {
             main: {
                 files: {
-                    'js/app.min.js': ['scripts/main.js']
+                    'js/app.min.js': ['src/js/main.js']
                 }
             }
         }              
@@ -110,5 +122,5 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('default', ['concurrent']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'cmq', 'concurrent']);
 };

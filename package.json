@@ -7,7 +7,7 @@
     "grunt-open": "~0.2.1",
     "grunt-contrib-compass": "~1.1.1",
     "grunt-concurrent": "~2.3.1",
-    "group-css-media-queries": "~1.1.0",
+    "grunt-combine-media-queries": "~1.0.20",
     "grunt-contrib-jshint": "~1.1.0",
     "grunt-contrib-uglify": "~2.3.0"
   }
